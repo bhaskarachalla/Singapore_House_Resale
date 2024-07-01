@@ -2,4 +2,4 @@ streamlit
 streamlit_option_menu
 geopy
 numpy
-mrt.csv
+path
