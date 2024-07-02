@@ -9,8 +9,12 @@ import numpy as np
 import pickle
 
 # -------------------------Reading the data on Lat and Long of all the MRT Stations in Singapore------------------------
+
 data = pd.read_csv('C:/Users/Srinivasa Rao/OneDrive/Documents/GUVI_Projects/Singapore_House_Resale/mrt.csv')
 mrt_location = pd.DataFrame(data)
+
+data1 = pd.read_csv('C:/Users/Srinivasa Rao/OneDrive/Documents/GUVI_Projects/Singapore_House_Resale/combined.csv')
+drop_box = pd.DataFrame(data1)
 
 # -------------------------------This is the configuration page for our Streamlit Application---------------------------
 st.set_page_config(
@@ -53,11 +57,11 @@ if selected == "Predictions":
 
     with st.form("form1"):
         # -----New Data inputs from the user for predicting the resale price-----
-        street_name = st.text_input("Street Name")
-        block = st.text_input("Block Number")
-        floor_area_sqm = st.number_input('Floor Area (Per Square Meter)', min_value=1.0, max_value=500.0)
-        lease_commence_date = st.number_input('Lease Commence Date')
-        storey_range = st.text_input("Storey Range (Format: 'Value1' TO 'Value2')")
+        street_name = st.selectbox('Select the street',drop_box['street_name'].unique())
+        block = st.selectbox("Select block",drop_box['blk_no'].unique())
+        floor_area_sqm = st.selectbox('Floor Area (Per Square Meter)', drop_box['floor_area_sqm'].unique())
+        lease_commence_date = st.selectbox('Lease Commence Date',drop_box['lease_commence_date'].unique())
+        storey_range = st.selectbox("Storey Range (Format: 'Value1' TO 'Value2')",drop_box['storey_range'].unique())
 
         # -----Submit Button for PREDICT RESALE PRICE-----
         submit_button = st.form_submit_button(label="PREDICT RESALE PRICE")
