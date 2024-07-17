@@ -10,8 +10,7 @@ import pickle
 
 # -------------------------Reading the data on Lat and Long of all the MRT Stations in Singapore------------------------
 
-data = pd.read_csv('mrt.csv')
-#data = pd.read_csv('C:/Users/Srinivasa Rao/OneDrive/Documents/GUVI_Projects/Singapore_House_Resale/mrt.csv')
+data = pd.read_csv('C:/Users/Srinivasa Rao/OneDrive/Documents/GUVI_Projects/Singapore_House_Resale/mrt.csv')
 mrt_location = pd.DataFrame(data)
 
 data1 = pd.read_csv('combined.csv')
