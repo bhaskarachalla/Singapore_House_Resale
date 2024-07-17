@@ -13,8 +13,7 @@ import pickle
 data = pd.read_csv('C:/Users/Srinivasa Rao/OneDrive/Documents/GUVI_Projects/Singapore_House_Resale/mrt.csv')
 mrt_location = pd.DataFrame(data)
 
-data1 = pd.read_csv('combined.csv')
-#data1 = pd.read_csv('C:/Users/Srinivasa Rao/OneDrive/Documents/GUVI_Projects/Singapore_House_Resale/combined.csv')
+data1 = pd.read_csv('C:/Users/Srinivasa Rao/OneDrive/Documents/GUVI_Projects/Singapore_House_Resale/combined.csv')
 drop_box = pd.DataFrame(data1)
 
 # -------------------------------This is the configuration page for our Streamlit Application---------------------------
