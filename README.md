@@ -58,12 +58,4 @@ To run this project locally:
    streamlit run app.py
    ```
 
-## Contact
-
-For any queries or suggestions, feel free to reach out to:
-
-- **Email:** bhaskarachalla054@gmail.com
-- **Phone:** +91-8523078272
-
-
 “Mistakes are the portals of discovery.”
